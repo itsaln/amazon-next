@@ -20,7 +20,11 @@
       "@/ui/*": ["components/ui/*"],
       "@/screens/*": ["components/screens/*"],
 
+      "@/api/*": ["api/*"],
       "@/assets/*": ["assets/*"],
+      "@/services/*": ["services/*"],
+      "@/store/*": ["store/*"],
+      "@/types/*": ["types/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
