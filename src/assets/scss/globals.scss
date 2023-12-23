@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply tw-text-base tw-text-black;
+}
+
+.disabled {
+  @apply tw-pointer-events-none tw-cursor-default tw-decoration-none tw-opacity-20;
+}

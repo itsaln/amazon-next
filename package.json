@@ -1,7 +1,14 @@
 {
-  "name": "next",
+  "name": "amazon-next",
+  "description": "The ecommerce site for Amazon v2.0",
   "version": "0.1.0",
+  "author": {
+    "email": "itsaln23@gmail.com",
+    "name": "Aladin Mukhammadiev",
+    "url": "https://itsaln.uz"
+  },
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,19 +16,32 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^1.6.2",
+    "clsx": "^2.0.0",
+    "next": "14.0.4",
+    "nextjs-progressbar": "^0.0.16",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "react-hook-form": "^7.49.2",
+    "react-icons": "^4.12.0",
+    "react-loading-skeleton": "^3.3.1",
+    "react-query": "^3.39.3",
+    "react-redux": "^9.0.4",
+    "react-redux-toastr": "^7.6.13",
+    "tailwindcss-global-dark": "^1.0.1"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }
