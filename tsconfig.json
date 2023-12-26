@@ -22,6 +22,8 @@
 
       "@/api/*": ["api/*"],
       "@/assets/*": ["assets/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/providers/*": ["providers/*"],
       "@/services/*": ["services/*"],
       "@/store/*": ["store/*"],
       "@/types/*": ["types/*"],
