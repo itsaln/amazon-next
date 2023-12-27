@@ -12,10 +12,6 @@ export const getRefreshToken = () => {
 	return refreshToken || null
 }
 
-export const getUserFromStorage = () => {
-	return JSON.parse(localStorage.getItem('user') || '{}')
-}
-
 export const saveTokensStorage = (data: ITokens) => {
 	Cookies.set('accessToken', data.accessToken)
 	Cookies.set('refreshToken', data.refreshToken)
