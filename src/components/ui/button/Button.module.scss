@@ -1,0 +1,11 @@
+.button {
+  @apply tw-rounded-xl tw-shadow tw-font-medium tw-py-2 tw-px-10;
+
+  &.orange {
+    @apply tw-bg-primary tw-text-white;
+  }
+
+  &.white {
+    @apply tw-bg-white tw-text-primary;
+  }
+}

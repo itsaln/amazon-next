@@ -19,6 +19,7 @@
     "^@/hooks/(.*)$",
     "^@/providers/(.*)$",
     "^@/services/(.*)$",
+    "^@/shared/(.*)$",
     "^@/store/(.*)$",
     "^@/types/(.*)$",
     "^@/utils/(.*)$",

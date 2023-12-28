@@ -25,6 +25,7 @@
       "@/hooks/*": ["hooks/*"],
       "@/providers/*": ["providers/*"],
       "@/services/*": ["services/*"],
+      "@/shared/*": ["shared/*"],
       "@/store/*": ["store/*"],
       "@/types/*": ["types/*"],
       "@/utils/*": ["utils/*"],

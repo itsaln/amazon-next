@@ -6,10 +6,15 @@ const colors = {
 	transparent: twColors.transparent,
 	black: '#2E3239',
 	white: twColors.white,
+	gray: '#CDCDCD',
+  yellow: twColors.yellow,
+  green: twColors.green,
+  blue: twColors.blue,
 	primary: '#FF9902',
 	secondary: '#161D25',
 	'bg-color': '#F2F2F5',
-	aqua: '#268697'
+	aqua: '#268697',
+	red: twColors.red[400]
 }
 
 const config: Config = {

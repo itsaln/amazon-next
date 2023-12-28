@@ -4,7 +4,7 @@ import Meta from '@/ui/meta/Meta'
 
 const Home: FC = () => {
 	return (
-	    <Meta title='Home' description='Home page description'>Home</Meta>
+	    <Meta title='Home'>Home</Meta>
 	)
 }
 

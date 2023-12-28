@@ -1,0 +1,23 @@
+.field {
+  @apply tw-mb-4;
+
+  > label {
+    @apply tw-block;
+  }
+
+  .label {
+    @apply tw-block tw-mb-1;
+  }
+
+  .input {
+    @apply tw-w-full tw-rounded-lg tw-border tw-border-gray tw-border-solid focus:tw-border-primary tw-outline-none tw-transition-all placeholder:tw-text-gray tw-py-2 tw-px-4;
+
+    &.error {
+      @apply tw-border-red;
+    }
+  }
+}
+
+.error {
+  @apply tw-text-sm tw-text-red tw-mt-1;
+}
