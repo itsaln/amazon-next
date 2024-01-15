@@ -16,3 +16,8 @@ export interface IProduct {
 export interface IProductDetails {
 	product: IProduct
 }
+
+export interface IPaginationProduct {
+	length: number
+	products: IProduct[]
+}

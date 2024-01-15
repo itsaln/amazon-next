@@ -7,9 +7,9 @@ const colors = {
 	black: '#2E3239',
 	white: twColors.white,
 	gray: '#CDCDCD',
-  yellow: twColors.yellow,
-  green: twColors.green,
-  blue: twColors.blue,
+	yellow: twColors.yellow,
+	green: twColors.green,
+	blue: twColors.blue,
 	primary: '#FF9902',
 	secondary: '#161D25',
 	'bg-color': '#F2F2F5',
@@ -64,6 +64,11 @@ const config: Config = {
 			animation: {
 				opacity: 'animationOpacity .5s ease-in-out',
 				scaleIn: 'scaleIn .35s ease-in-out'
+			},
+			zIndex: {
+				1: '1',
+				2: '2',
+				3: '3'
 			}
 		}
 	},

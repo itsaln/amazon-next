@@ -5,10 +5,14 @@ import { errorCatch, getContentType } from './api.helper'
 import { getAccessToken, removeFromStorage } from '@/services/auth/auth.helper'
 import { AuthService } from '@/services/auth/auth.service'
 
-const instance = axios.create({
+const axiosOptions = {
 	baseURL: process.env.SERVER_URL,
 	headers: getContentType()
-})
+}
+
+export const axiosClassic = axios.create(axiosOptions)
+
+const instance = axios.create(axiosOptions)
 
 instance.interceptors.request.use(async (config) => {
 	const accessToken = getAccessToken()

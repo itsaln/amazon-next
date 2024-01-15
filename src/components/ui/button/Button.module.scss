@@ -1,5 +1,5 @@
 .button {
-  @apply tw-rounded-xl tw-shadow tw-font-medium tw-py-2 tw-px-10;
+  @apply tw-rounded-xl tw-shadow hover:tw-shadow-lg tw-font-medium tw-py-2 tw-px-10 tw-transition tw-duration-300 tw-ease-in-out;
 
   &.orange {
     @apply tw-bg-primary tw-text-white;
@@ -7,5 +7,9 @@
 
   &.white {
     @apply tw-bg-white tw-text-primary;
+  }
+
+  &.small {
+    @apply tw-text-sm tw-px-5 tw-py-2;
   }
 }

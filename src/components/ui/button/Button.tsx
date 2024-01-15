@@ -5,12 +5,14 @@ import styles from './Button.module.scss'
 
 interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant: 'orange' | 'white'
+	size?: 'sm' | 'md'
 }
 
 const Button: FC<PropsWithChildren<IButton>> = ({
 	children,
 	className,
 	variant,
+	size = 'md',
 	...rest
 }) => {
 	return (
@@ -19,7 +21,8 @@ const Button: FC<PropsWithChildren<IButton>> = ({
 				styles.button,
 				{
 					[styles.orange]: variant === 'orange',
-					[styles.white]: variant === 'white'
+					[styles.white]: variant === 'white',
+					[styles.small]: size === 'sm'
 				},
 				className
 			)}

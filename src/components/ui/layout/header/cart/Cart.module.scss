@@ -1,0 +1,22 @@
+.cart {
+
+}
+
+.item {
+  @apply tw-flex tw-flex-nowrap tw-items-start tw-mb-5 last:tw-mb-0;
+
+  > img {
+    @apply tw-min-w-[80px] tw-min-h-[80px] tw-max-w-[80px] tw-max-h-[80px] tw-rounded-lg tw-object-cover tw-mr-3;
+  }
+
+  .name {
+    @apply tw-font-semibold tw-truncate-1;
+  }
+  .price {
+    @apply tw-font-light tw-mt-0.5;
+  }
+}
+
+.footer {
+  @apply tw-mt-10;
+}

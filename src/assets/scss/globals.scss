@@ -9,6 +9,26 @@ body {
   font-family: 'Golos Text', sans-serif;
 }
 
+a {
+  @apply tw-text-[inherit] tw-no-underline;
+}
+
+input, textarea {
+  &:focus, &:focus-visible {
+    @apply tw-shadow-none tw-outline-none;
+  }
+}
+
 .disabled {
   @apply tw-pointer-events-none tw-cursor-default tw-decoration-none tw-opacity-20;
+}
+
+.open-menu {
+  @apply tw-opacity-100;
+  transform: scale(1);
+}
+
+.close-menu {
+  @apply tw-opacity-0 tw-pointer-events-none;
+  transform: scale(0.8);
 }
