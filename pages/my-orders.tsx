@@ -27,11 +27,11 @@ const MyOrdersPage: NextPageAuth = () => {
 						orders?.map((order, index) => (
 							<div
 								key={`${order.id}_${index}`}
-								className='tw-bg-white tw-shadow tw-flex tw-gap-10 tw-p-7 tw-my-7'
+								className='tw-bg-white tw-rounded-lg tw-shadow tw-flex tw-gap-10 tw-p-7 tw-my-7'
 							>
 								<span>#{order.id}</span>
 								<span>{order.status}</span>
-								<span>{new Date(order.createdAt).toLocaleDateString()}</span>
+								<span>{new Date(order.createdAt).toLocaleDateString('ru-RU')}</span>
 								<span>{convertPrice(order.total)}</span>
 							</div>
 						))
