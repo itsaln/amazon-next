@@ -27,7 +27,7 @@ const Sidebar: FC = () => {
 		<aside
 			className='tw-bg-secondary tw-flex tw-flex-col tw-justify-between'
 			style={{
-				height: 'calc(100vh - 91px)'
+				height: 'calc(100vh - 88px)'
 			}}
 		>
 			<div>
