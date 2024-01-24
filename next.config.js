@@ -14,7 +14,7 @@ const nextConfig = {
 		return [
 			{
 				source: '/uploads/:path*',
-				destination: 'http://localhost:5200/uploads/:path*'
+				destination: 'https://amazon-cg3v.onrender.com/uploads/:path*'
 			}
 		]
 	}
