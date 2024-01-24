@@ -9,6 +9,14 @@ const nextConfig = {
 	},
 	images: {
 		domains: ['loremflickr.com', 'www.supershield.pl', 'avatars.githubusercontent.com']
+	},
+	async rewrites() {
+		return [
+			{
+				source: '/uploads/:path*',
+				destination: 'http://localhost:5200/uploads/:path*'
+			}
+		]
 	}
 }
 

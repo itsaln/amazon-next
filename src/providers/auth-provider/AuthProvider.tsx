@@ -1,24 +1,30 @@
+'use client'
+
 import { FC, PropsWithChildren, useEffect } from 'react'
-import dynamic from 'next/dynamic'
-import { useRouter } from 'next/router'
+import { usePathname, useRouter } from 'next/navigation'
+
+import { ADMIN_PANEL_URL } from '@/config/url.config'
 
 import { useAuth } from '@/hooks/useAuth'
 import { useActions } from '@/hooks/useActions'
 
 import { getAccessToken, getRefreshToken } from '@/services/auth/auth.helper'
 
-import { TypeComponentAuthFields } from './auth-page.types'
+import NotFound from '@/app/not-found'
 
-const DynamicCheckRole = dynamic(() => import('./CheckRole'), { ssr: false })
+import { protectedRoutes } from './protected-routes.data'
 
-const AuthProvider: FC<PropsWithChildren<TypeComponentAuthFields>> = ({
-	Component: { isOnlyUser },
-	children
-}) => {
+const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
 	const { user } = useAuth()
 	const { checkAuth, logout } = useActions()
 
-	const { pathname } = useRouter()
+	const { replace } = useRouter()
+	const pathname = usePathname()
+
+	const isProtectedRoute = protectedRoutes.some(
+		(route) => pathname?.startsWith(route)
+	)
+	const isAdminRoute = pathname?.startsWith(ADMIN_PANEL_URL)
 
 	useEffect(() => {
 		const accessToken = getAccessToken()
@@ -32,11 +38,15 @@ const AuthProvider: FC<PropsWithChildren<TypeComponentAuthFields>> = ({
 		if (!refreshToken && user) logout()
 	}, [pathname])
 
-	return isOnlyUser ? (
-		<DynamicCheckRole Component={{ isOnlyUser }} children={children} />
-	) : (
-		<>{children}</>
-	)
+	if (!isProtectedRoute && !isAdminRoute) return <>{children}</>
+
+	if (user?.isAdmin) return <>{children}</>
+	if (user && isProtectedRoute) return <>{children}</>
+
+	if (user && isAdminRoute) return <NotFound />
+
+	pathname !== '/auth' && replace('/auth')
+	return null
 }
 
 export default AuthProvider

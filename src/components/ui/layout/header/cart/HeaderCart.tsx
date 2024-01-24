@@ -1,6 +1,6 @@
 import cn from 'clsx'
 import { FC } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { useMutation } from '@tanstack/react-query'
 import { RiShoppingCartLine } from 'react-icons/ri'
 
@@ -36,7 +36,8 @@ const Cart: FC = () => {
 				}))
 			}),
 		onSuccess({ data }) {
-			push(data.confirmation.confirmation_url).then(() => reset())
+			push(data.confirmation.confirmation_url)
+			reset()
 		}
 	})
 

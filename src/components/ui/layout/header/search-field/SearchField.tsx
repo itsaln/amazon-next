@@ -1,6 +1,6 @@
 import cn from 'clsx'
 import { forwardRef, InputHTMLAttributes, useState } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { FieldError } from 'react-hook-form'
 import { FiSearch } from 'react-icons/fi'
 

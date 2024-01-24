@@ -29,7 +29,7 @@ export const ProductService = {
 	},
 
 	async getByCategory(categorySlug: string) {
-		return axiosClassic.get<IProduct>(
+		return axiosClassic.get<IProduct[]>(
 			`/${PRODUCTS}/by-category/${categorySlug}`
 		)
 	},

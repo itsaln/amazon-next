@@ -11,11 +11,12 @@
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
     "^@/components/(.*)$",
-    "^@/screens/(.*)$",
     "^@/ui/(.*)$",
 
     "^@/api/(.*)$",
+    "^@/app/(.*)$",
     "^@/assets/(.*)$",
+    "^@/config/(.*)$",
     "^@/hooks/(.*)$",
     "^@/providers/(.*)$",
     "^@/services/(.*)$",
