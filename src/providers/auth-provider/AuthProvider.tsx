@@ -30,13 +30,13 @@ const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
 		const accessToken = getAccessToken()
 
 		if (accessToken) checkAuth()
-	}, [])
+	}, [checkAuth])
 
 	useEffect(() => {
 		const refreshToken = getRefreshToken()
 
 		if (!refreshToken && user) logout()
-	}, [pathname])
+	}, [pathname, logout, user])
 
 	if (!isProtectedRoute && !isAdminRoute) return <>{children}</>
 

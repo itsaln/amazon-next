@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router' // TODO: next/navigation
 import { useEffect } from 'react'
 
 import { useAuth } from '@/hooks/useAuth'
@@ -12,5 +12,5 @@ export const useAuthRedirect = () => {
 		if (user) {
 			let ignore = push(redirect)
 		}
-	}, [user, query, push])
+	}, [user, query, push, redirect])
 }
