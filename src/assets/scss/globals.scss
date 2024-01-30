@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap');
-
 body {
   @apply tw-bg-bg-color tw-text-base tw-text-black;
-  font-family: 'Golos Text', sans-serif;
+  font-family: var(--font-golos), sans-serif;
 }
 
 a {
@@ -23,12 +21,22 @@ input, textarea {
   @apply tw-pointer-events-none tw-cursor-default tw-decoration-none tw-opacity-20;
 }
 
-.open-menu {
-  @apply tw-opacity-100;
-  transform: scale(1);
-}
+.btn {
+  @apply tw-rounded-xl tw-shadow tw-font-medium tw-py-2 tw-px-10 tw-transition tw-duration-300 tw-ease-in-out;
 
-.close-menu {
-  @apply tw-opacity-0 tw-pointer-events-none;
-  transform: scale(0.8);
+  &:not(&:disabled) {
+    @apply hover:tw-shadow-lg;
+  }
+
+  &.btn-orange {
+    @apply tw-bg-primary tw-text-white;
+  }
+
+  &.btn-white {
+    @apply tw-bg-white tw-text-primary;
+  }
+
+  &.btn-sm {
+    @apply tw-text-sm tw-px-5 tw-py-2;
+  }
 }

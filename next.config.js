@@ -8,7 +8,7 @@ const nextConfig = {
 		APP_URL: process.env.APP_URL
 	},
 	images: {
-		domains: ['loremflickr.com', 'www.supershield.pl', 'avatars.githubusercontent.com']
+		domains: ['loremflickr.com', 'www.supershield.pl', 'avatars.githubusercontent.com', 'cloudflare-ipfs.com']
 	},
 	async rewrites() {
 		return [

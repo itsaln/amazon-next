@@ -15,10 +15,10 @@ import Heading from '@/ui/heading/Heading'
 import Field from '@/ui/field/Field'
 import SkeletonLoader from '@/ui/skeleton-loader'
 
-// import { useAuthRedirect } from './useAuthRedirect'
+import { useAuthRedirect } from './useAuthRedirect'
 
 const Auth: FC = () => {
-	// useAuthRedirect()
+	useAuthRedirect()
 
 	const { isLoading } = useAuth()
 	const { register, login } = useActions()

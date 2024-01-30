@@ -1,16 +1,13 @@
-import { useRouter } from 'next/router' // TODO: next/navigation
+import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 
 import { useAuth } from '@/hooks/useAuth'
 
 export const useAuthRedirect = () => {
 	const { user } = useAuth()
-	const { push, query } = useRouter()
-	const redirect = query.redirect ? String(query.redirect) : '/'
+	const { replace } = useRouter()
 
 	useEffect(() => {
-		if (user) {
-			let ignore = push(redirect)
-		}
-	}, [user, query, push, redirect])
+		if (user) replace('/')
+	}, [user])
 }

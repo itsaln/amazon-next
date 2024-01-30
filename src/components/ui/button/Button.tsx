@@ -1,8 +1,6 @@
 import cn from 'clsx'
 import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react'
 
-import styles from './Button.module.scss'
-
 interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant: 'orange' | 'white'
 	size?: 'sm' | 'md'
@@ -18,11 +16,11 @@ const Button: FC<PropsWithChildren<IButton>> = ({
 	return (
 		<button
 			className={cn(
-				styles.button,
+				'btn',
 				{
-					[styles.orange]: variant === 'orange',
-					[styles.white]: variant === 'white',
-					[styles.small]: size === 'sm'
+					'btn-orange': variant === 'orange',
+					'btn-white': variant === 'white',
+					'btn-sm': size === 'sm'
 				},
 				className
 			)}

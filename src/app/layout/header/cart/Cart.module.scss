@@ -1,6 +1,9 @@
-.cart {
-
+.cartWrapper {
+  @apply tw-absolute tw-w-80 tw-bg-secondary tw-rounded-xl tw-text-sm tw-text-white tw-px-6 tw-py-4 -tw-left-[12.5rem] tw-top-[4.2rem] tw-z-20;
+  animation: 0.7s cartAnimation ease-in-out;
 }
+
+.cart {}
 
 .item {
   @apply tw-flex tw-flex-nowrap tw-items-start tw-mb-5 last:tw-mb-0;
@@ -19,4 +22,14 @@
 
 .footer {
   @apply tw-mt-10;
+}
+
+@keyframes cartAnimation {
+  from {
+    transform: translateX(110%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }

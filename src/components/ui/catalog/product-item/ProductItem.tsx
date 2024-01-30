@@ -8,18 +8,15 @@ import { IProduct } from '@/types/product.interface'
 import { convertPrice } from '@/utils/index'
 
 import AddToCartButton from './AddToCartButton'
+import FavoriteButton from './FavoriteButton'
 import ProductRating from './ProductRating'
-
-const DynamicFavoriteButton = dynamic(() => import('./FavoriteButton'), {
-	ssr: false
-})
 
 const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 	return (
 		<div className='tw-animate-scaleIn'>
 			<div className='tw-relative tw-bg-white tw-rounded-xl tw-overflow-hidden'>
 				<div className='tw-absolute tw-top-2 tw-right-3 tw-z-1'>
-					<DynamicFavoriteButton productId={product.id} />
+					<FavoriteButton productId={product.id} />
 					<AddToCartButton product={product} />
 				</div>
 				<Link href={`/product/${product.slug}`}>
@@ -28,6 +25,7 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 						alt={product.name}
 						width={250}
 						height={250}
+						className='tw-block tw-mx-auto'
 					/>
 				</Link>
 			</div>
@@ -40,7 +38,7 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 			>
 				{product.category.name}
 			</Link>
-			<ProductRating product={product} />
+			<ProductRating product={product} isText />
 			<div className='tw-font-semibold tw-text-xl'>
 				{convertPrice(product.price)}
 			</div>

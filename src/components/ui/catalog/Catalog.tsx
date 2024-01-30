@@ -5,15 +5,19 @@ import { FC } from 'react'
 import { IProduct } from '@/types/product.interface'
 
 import Heading from '@/ui/heading/Heading'
+import SkeletonLoader from '@/ui/skeleton-loader'
 
 import ProductItem from './product-item/ProductItem'
 
 interface ICatalog {
 	products: IProduct[]
+	isLoading?: boolean
 	title?: string
 }
 
-const Catalog: FC<ICatalog> = ({ products, title }) => {
+const Catalog: FC<ICatalog> = ({ products, isLoading, title }) => {
+	if (isLoading) return <SkeletonLoader />
+
 	return (
 		<section>
 			{title && <Heading className='tw-mb-5'>{title}</Heading>}

@@ -4,10 +4,9 @@ import { useQuery } from '@tanstack/react-query'
 
 import { OrderService } from '@/services/order.service'
 
-import Layout from '@/ui/layout/Layout'
-import Heading from '@/ui/heading/Heading'
-
 import { convertPrice } from '@/utils/index'
+
+import Heading from '@/ui/heading/Heading'
 
 interface IMyOrders {}
 
@@ -19,7 +18,7 @@ export default function MyOrders({}: IMyOrders) {
 	})
 
 	return (
-		<Layout>
+		<>
 			<Heading>My order</Heading>
 
 			<section>
@@ -41,6 +40,6 @@ export default function MyOrders({}: IMyOrders) {
 					<div>Orders not found!</div>
 				)}
 			</section>
-		</Layout>
+		</>
 	)
 }

@@ -1,19 +1,12 @@
-'use client'
-
 import { FC } from 'react'
 
 import { IPaginationProduct } from '@/types/product.interface'
 
-import Layout from '@/ui/layout/Layout'
-import CatalogPagination from '@/ui/catalog/CatalogPagination'
+import Catalog from '@/ui/catalog/Catalog'
 
 const Home: FC<IPaginationProduct> = ({ products, length }) => {
 	return (
-		<Layout>
-			{/* Carousel	*/}
-
-			<CatalogPagination data={{ products, length }} title='Freshed products' />
-		</Layout>
+		<Catalog title='Freshed products' products={products} />
 	)
 }
 
